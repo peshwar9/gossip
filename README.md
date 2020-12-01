@@ -47,3 +47,4 @@ RUST_LOG=info cargo run -- --period 7 --port 8082 --connect "127.0.0.1:8080"
 - Code is a bit rough, with some short-cuts taken.
 - Custom error handling can be done
 - Code not fully idomatic
+- Tests to be added
