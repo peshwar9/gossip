@@ -20,7 +20,7 @@ pub struct PeerList {
 }
 
 // Gossip message types: 3 types
-// Join:  A node sends this message when it starts up
+// Join:  A node sends this message when it starts up (if --connect specified)
 // NotifyNew: The anchor node (mentioned in --connect parm) sends this msg to other nodes
 // HeartBeat: Sent by all nodes on a cadence
 

@@ -33,7 +33,7 @@ fn main() {
     // Set timeout
     udp_socket
         .set_read_timeout(Some(Duration::from_millis(read_timeout)))
-        .expect("fail to set read timeout"); // If connect parameter is provided, send a Gossip::Join message to that address
+        .expect("fail to set read timeout");
 
     // If --connect parameter is specified, send Join message to that address
     if let Some(remote_peer) = opt.connect {
@@ -70,7 +70,7 @@ fn main() {
                         }
                     }
                     GossipMessage::NotifyNew(node) => {
-                        // Add the newly joined node to peer list
+                        // If notification of new node is received, add it to peer list
                         peer_list.push(format!("localhost:{}", node.peer.port));
 
                         println!(
@@ -79,7 +79,7 @@ fn main() {
                         )
                     }
                     GossipMessage::HeartBeat(from) => {
-                        // Add the newly joined node to peer list
+                        // If heartbeat message is received, print it out.
                         let addr = format!("localhost:{}", opt.port);
 
                         if addr != from {
