@@ -44,7 +44,7 @@ RUST_LOG=info cargo run -- --period 7 --port 8082 --connect "127.0.0.1:8080"
 ### To do/ Improvements:
 
 - A new message type to be added for when a node leaves the network.
-- Code is a bit rough, with some short-cuts taken.
+- Algorithmic complexity and optimization. For ex, Hashmap may be better than Vector for peer-list, as it has O(1) time complexity for get operations.
 - Custom error handling can be done
 - Code not fully idomatic
 - Tests to be added
